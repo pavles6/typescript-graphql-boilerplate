@@ -1,0 +1,20 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: "app_name"
+      POSTGRES_HOST_AUTH_METHOD: "trust"
+    ports:
+      - "5432:5432"
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+  web:
+    image: app_name-prod
+    env_file: .docker.env
+    depends_on:
+      - db
+    ports:
+      - "4000:4000"
