@@ -30,7 +30,7 @@
   "dependencies": {
     "apollo-server-express": "^2.19.0",
     "bcryptjs": "^2.4.3",
-    "class-validator": "^0.12.2",
+    "class-validator": "^0.14.0",
     "connect-redis": "^5.0.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
